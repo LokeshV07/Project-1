@@ -17,8 +17,9 @@ if fl is not None:
     st.write(filename)
     df=pd.read_excel(filename)
 else:
-    os.chdir(r"H:\Web project")
-    df=pd.read_excel("05 May 2023.xlsx")
+    st.write("Kindly upload a file")
+    #os.chdir(r"H:\Web project")
+    #df=pd.read_excel("05 May 2023.xlsx")
 
 col1,col2 =st.columns((2))
 df["TRANSDATE"]=pd.to_datetime(df["TRANSDATE"])
